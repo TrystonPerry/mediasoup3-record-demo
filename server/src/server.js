@@ -263,6 +263,8 @@ const publishProducerRtpStream = async (
     paused: true,
   });
 
+  // setInterval(async () => console.log(await producer.getStats()), 1000);
+  // setInterval(async () => console.log(await rtpConsumer.getStats()), 1000);
   peer.consumers.push(rtpConsumer);
 
   return {

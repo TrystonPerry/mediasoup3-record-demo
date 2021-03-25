@@ -22,25 +22,19 @@ module.exports = Object.freeze({
         kind: "video",
         mimeType: "video/VP8",
         clockRate: 90000,
-        rtcpFeedback: [
-          { type: "nack" },
-          { type: "nack", parameter: "pli" },
-          { type: "ccm", parameter: "fir" },
-          { type: "goog-remb" },
-          { type: "transport-cc" },
-        ],
+        rtcpFeedback: [],
       },
     ],
   },
   webRtcTransport: {
-    listenIps: [{ ip: "0.0.0.0", announcedIp: "0.0.0.0" }], // TODO: Change announcedIp to your external IP or domain name
+    listenIps: [{ ip: "0.0.0.0", announcedIp: "127.0.0.1" }], // TODO: Change announcedIp to your external IP or domain name
     enableUdp: true,
     enableTcp: true,
     preferUdp: true,
     maxIncomingBitrate: 1500000,
   },
   plainRtpTransport: {
-    listenIp: { ip: "0.0.0.0", announcedIp: "0.0.0.0" }, // TODO: Change announcedIp to your external IP or domain name
+    listenIp: { ip: "0.0.0.0", announcedIp: "127.0.0.1" }, // TODO: Change announcedIp to your external IP or domain name
     rtcpMux: true,
     comedia: false,
   },
